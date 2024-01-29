@@ -1,3 +1,6 @@
+@import "~slick-carousel/slick/slick.css"; 
+@import "~slick-carousel/slick/slick-theme.css";
+
 .App {
   text-align: center;
 }
@@ -26,6 +29,12 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.carousel-container {
+  max-width: 300px; /* or any other size you prefer */
+  margin: auto; /* this centers the carousel */
+
 }
 
 @keyframes App-logo-spin {
