@@ -16,6 +16,7 @@ import './App.css';
 import grafico1 from './img/grafico1.png';
 import grafico2 from './img/grafico2.png';
 import grafico3 from './img/grafico3.jpg';
+import Pantalla2 from './components/Pantalla2';
 
 
 function App() {
@@ -23,6 +24,11 @@ function App() {
 
 
     return (
+      
+        
+        <Pantalla2/>
+        
+        /*
         <div className="App">
           <Navbar bg="light" expand="lg" className="justify-content-between">
             <Nav className="container-fluid">
@@ -78,7 +84,7 @@ function App() {
             />
           </div>
 <div>
-          {/* Periodo: Date Range Picker */}
+          {/* Periodo: Date Range Picker 
           <InputGroup className="mb-3">
             <InputGroup.Text>De</InputGroup.Text>
             <FormControl type="date" />
@@ -128,7 +134,8 @@ function App() {
               </Carousel.Item>
             </Carousel>
           </div>
-        </div>
+    </div>*/
+    
       );
     }
 
