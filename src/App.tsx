@@ -16,7 +16,9 @@ import './App.css';
 import grafico1 from './img/grafico1.png';
 import grafico2 from './img/grafico2.png';
 import grafico3 from './img/grafico3.jpg';
-import Pantalla2 from './components/Pantalla2';
+import Pantalla2 from './views/Pantalla2';
+import Pantalla3 from './views/Pantalla3';
+import Pantalla4 from './views/Pantalla4';
 
 
 function App() {
@@ -26,7 +28,7 @@ function App() {
     return (
       
         
-        <Pantalla2/>
+        <Pantalla3/>
         
         /*
         <div className="App">

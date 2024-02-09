@@ -1,20 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
-import './App.css';
 import Slider from 'react-slick';
+import 'react-datepicker/dist/react-datepicker.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button, Carousel, Form, FormControl, InputGroup, Nav, Navbar, Table } from 'react-bootstrap';
-
+import { Button, Carousel, Col, Container, Form, FormControl, InputGroup, Nav, Navbar, Row, Table } from 'react-bootstrap';
+import DatePicker from 'react-datepicker';
 // Import the necessary styles
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
 // Import Bootstrap and your custom CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
+import '../components/App.css';
+import { MyChart } from '../components/data';
 
-function Pantalla2() {
-
+function Pantalla3() {
+    const [startDate, setStartDate] = useState(new Date());
+    const [endDate, setEndDate] = useState(new Date());
+  
 
 
     return (
@@ -28,45 +31,32 @@ function Pantalla2() {
               <Nav.Link href="#configuracion">Configuración</Nav.Link>
             </Nav>
           </Navbar>
-          <h2 style={{display:'flex', justifyContent:"flex-start", marginLeft:"50px", marginTop:"20px"}}>Carga de datos</h2>
-          <div style={{ marginLeft: "50px",marginTop: "50px", display: 'flex', justifyContent:'flex-start'}}>
+          <h2 style={{display:'flex', justifyContent:"flex-start", marginLeft:"90px", marginTop:"20px"}}>Editar datos</h2>
+          <div style={{ marginLeft: "90px",marginTop: "50px", display: 'flex', justifyContent:'flex-start'}}>
         <Form.Label htmlFor="selectEntidad" className="me-2">Entidad</Form.Label>
         <Form.Select id="selectEntidad" className="me-2" style={{ display: 'inline-block', width: 'auto', marginLeft:"50px" }}>
           <option>Select</option>
-          {/* Add more options here as needed */}
-        </Form.Select>
+       </Form.Select>
 
 
 
       </div>
         
-      <div style={{ display: 'flex', alignItems: 'center', padding: '10px' }}>
-        <Form.Check 
-          type="radio"
-          label="Fichero"
-          name="options"
-          id="option1"
-          style={{ marginRight: '10px' }}
-        />
-        <InputGroup style={{ marginRight: '10px', maxWidth: '200px' }}>
-          <Form.Control
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <Button variant="outline-secondary" id="button-addon2">
-            Cargar
-          </Button>
-        </InputGroup>
-        <Form.Check 
-          type="radio"
-          label="Manual"
-          name="options"
-          id="option2"
-          style={{ marginLeft: '10px' }}
-        />
+      <div style={{ display: 'flex',  padding: '20px', marginLeft:"70px"}}>
+      <p style={{marginRight:"10px", marginTop:"5px"}}>Periodo</p>
+      <div style={{ border:"1px solid black", display: 'flex', padding: '5px'}}>
+      
+        <Form.Group style={{ marginLeft:"30px"}}>
+          <Form.Label style={{marginRight:"10px"}}>De: </Form.Label>
+          <DatePicker selected={startDate} onChange={date => date && setStartDate(date)} />        </Form.Group>
+     
+        <Form.Group>
+          <Form.Label style={{marginRight:"10px", marginLeft:"30px", }}>Hasta: </Form.Label>
+          <DatePicker selected={endDate} onChange={date => date && setEndDate(date)} />        </Form.Group>
+   </div>
       </div>
 
-
+<Container style={{margin:"50px"}}>
       <Table striped bordered hover>
         <thead>
           <tr>
@@ -79,9 +69,16 @@ function Pantalla2() {
           </tr>
         </thead>
         <tbody>
-          {/* Here you can map through your data and create table rows */}
           <tr>
-            <td></td> {/* Empty cells for demonstration */}
+            <td></td> 
+           <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
             <td></td>
             <td></td>
             <td></td>
@@ -89,7 +86,7 @@ function Pantalla2() {
             <td></td>
           </tr>
           <tr>
-            <td></td> {/* Empty cells for demonstration */}
+            <td></td> 
             <td></td>
             <td></td>
             <td></td>
@@ -97,65 +94,57 @@ function Pantalla2() {
             <td></td>
           </tr>
           <tr>
-            <td></td> {/* Empty cells for demonstration */}
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td> {/* Empty cells for demonstration */}
-            <td></td>
+            <td></td> 
+        <td></td>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
           </tr>
           <tr>
-            <td></td> {/* Empty cells for demonstration */}
             <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td> {/* Empty cells for demonstration */}
-            <td></td>
+           <td></td>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
           </tr>
           <tr>
-            <td></td> {/* Empty cells for demonstration */}
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td> {/* Empty cells for demonstration */}
-            <td></td>
+            <td></td> 
+          <td></td>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
           </tr>
           <tr>
-            <td></td> {/* Empty cells for demonstration */}
+            <td></td> 
+       <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td> 
+       <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td> 
             <td></td>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
           </tr>
-          {/* Repeat the empty row as needed */}
-          {/* ... */}
-        </tbody>
+       </tbody>
       </Table>
+      </Container>
+      <button type="button" className="btn btn-outline-secondary" style={{marginLeft:"500px"}}>Guardar</button>
         
         
         
@@ -165,4 +154,5 @@ function Pantalla2() {
 
 
 
-export default Pantalla2;
+
+export default Pantalla3;
